@@ -195,6 +195,7 @@ button {
     .s-container {
         grid-template-columns: 1fr;
         gap : 2rem;
+        width :70vw;
     }
     .side {
         height: 50vh;
