@@ -1,0 +1,206 @@
+:root {
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+
+*{
+    margin : 0;
+    padding : 0;
+}
+
+html,body{
+    min-height : 100vh;
+}
+
+body {
+    font-size : 15px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 3rem;
+    background-color : var(--Very-Light-Grayish-Blue);
+    /* background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%)); */
+}
+
+.f-container{
+    display : flex;
+    flex-direction : column;
+    gap : 2rem;
+}
+
+.f-container h2{
+    color : var(--Grayish-Blue);
+}
+
+.f-container-2 {
+    display: flex;
+    flex-direction: row;
+    gap : 1.5rem;
+}
+
+.f-container-2 p{
+    text-align : center;
+    align-self : center;
+    color : var(--Light-Grayish-Blue);
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+.s-container{
+    display : grid;
+    grid-template-columns : 1fr 1fr 1fr;
+    height : 50vh;
+    width : 55vw;
+    gap : -10px;
+}
+
+.side{
+    height : 50vh;
+    align-self : center;
+    background : white;
+    color : var(--Dark-Grayish-Blue)
+}
+
+.side.left{
+    border-radius : 7px 0 0 7px;
+}
+.side.right{
+    border-radius : 0 7px 7px 0;
+}
+.mid {
+    color : white;
+    border-radius: 12px;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.mid h5{
+    margin : 24px 0 10px;
+}
+
+hr{
+    width : 80%;
+    margin : auto;
+}
+
+h5{
+    margin : 10px 0 ;
+}
+
+h1{
+    margin : 10px 0 20px;
+}
+
+h6 {
+    margin: 10px 0;
+}
+
+button {
+    margin: 15px 0;
+    width : 80%;
+    height : 30px;
+    border-radius : 5px;
+    border : none;
+}
+
+.side button {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color : white;
+}
+
+.side button:hover {
+    background: white;
+    border: 1.5px solid var(--Light-Grayish-Blue);
+    color : var(--Dark-Grayish-Blue);
+}
+
+
+.mid button {
+    background-color: white;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.mid button:hover {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: 1.5px solid white;
+    color : white;
+}
+
+@media only screen and (max-width : 500px){
+    .s-container {
+        grid-template-columns: 1fr;
+        gap : 2rem;
+    }
+    .side {
+        height: 50vh;
+        border-radius: 10px 10px 10px 10px !important;
+    }
+    .mid {
+        height: 50vh;
+    }
+}
